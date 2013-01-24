@@ -1,5 +1,5 @@
 # DMRNotificationView
-DMRNotificationView is a simple panel that slides down to inform the user about something. It has a title and subtitle (optional). You can set custom tint colors (automatically adds 0.85 transparency to tint color), fonts and dismiss interval. Everything is done inside `drawRect:`.
+DMRNotificationView is a simple panel that slides down to inform the user about something. It has a title and subtitle (optional). You can set custom tint colors (automatically adds 0.85 transparency to tint color), fonts and dismiss interval.
 
 ![DMRNotificationView](http://bascarsija.s3.amazonaws.com/dmrnotificationview.png)
 
