@@ -29,10 +29,10 @@ typedef NS_OPTIONS(NSUInteger, DMRNotificationViewType)
 /* Notification view tint color. Setter automatically sets 0.85 transparency (you can adjust transparency 
  by changing kNotificationViewTintColorTransparency).
  Default is [UIColor colorWithRed:0.384 green:0.486 blue:0.620 alpha:1.000]. */
-@property (strong, nonatomic) UIColor *tintColor;
+@property (strong, nonatomic) UIColor *tintColor UI_APPEARANCE_SELECTOR;
 
 /* Default is YES (0.85 opacity) */
-@property (nonatomic, assign, setter = setIsTransparent:) BOOL transparent;
+@property (nonatomic, assign, setter = setIsTransparent:) BOOL transparent UI_APPEARANCE_SELECTOR;
 
 /* Target view in which the notification will appear. Cannot be nil. */
 @property (nonatomic, weak) UIView *targetView;
@@ -48,8 +48,8 @@ typedef NS_OPTIONS(NSUInteger, DMRNotificationViewType)
 @property (nonatomic) NSTimeInterval hideTimeInterval;
 
 /* Optional: custom fonts. */
-@property (strong, nonatomic) UIFont *titleFont;            // Default is [UIFont boldSystemFontOfSize:18.0]
-@property (strong, nonatomic) UIFont *subTitleFont;         // Default is [UIFont systemFontOfSize:15.0]
+@property (strong, nonatomic) UIFont *titleFont UI_APPEARANCE_SELECTOR;            // Default is [UIFont boldSystemFontOfSize:18.0]
+@property (strong, nonatomic) UIFont *subTitleFont UI_APPEARANCE_SELECTOR;         // Default is [UIFont systemFontOfSize:15.0]
 
 /**
  Default initializer. Target view is the view in which the notification view will appear. Use this method 
