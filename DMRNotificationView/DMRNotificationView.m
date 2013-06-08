@@ -157,7 +157,7 @@ static CGFloat kNotificationViewShadowOffset = 5.0;                     // Shado
     
     if (animated)
     {
-        [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationCurveEaseIn animations:^{
+        [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
             [self setCenter:animateToCenter];
         } completion:nil];
     }
@@ -178,7 +178,7 @@ static CGFloat kNotificationViewShadowOffset = 5.0;                     // Shado
 {
     if (animated)
     {
-        [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
+        [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             [self setCenter:CGPointMake(self.center.x, -self.bounds.size.height)];
         } completion:^(BOOL finished) {
             [self removeFromSuperview];
