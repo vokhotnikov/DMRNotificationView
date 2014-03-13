@@ -51,6 +51,9 @@ typedef NS_OPTIONS(NSUInteger, DMRNotificationViewType)
 @property (strong, nonatomic) UIFont *titleFont UI_APPEARANCE_SELECTOR;            // Default is [UIFont boldSystemFontOfSize:18.0]
 @property (strong, nonatomic) UIFont *subTitleFont UI_APPEARANCE_SELECTOR;         // Default is [UIFont systemFontOfSize:15.0]
 
+/* Optional: extra top inset (userful for tranparent status bar compensation in iOS 7) */
+@property (nonatomic, assign) CGFloat extraTopInset;
+
 /**
  Default initializer. Target view is the view in which the notification view will appear. Use this method 
  if you want to customize the fonts, interval for dismiss and transparency.

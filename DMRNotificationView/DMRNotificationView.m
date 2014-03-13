@@ -47,6 +47,7 @@ static CGFloat kNotificationViewShadowOffset = 5.0;                     // Shado
         [self setIsTransparent:YES];
         [self setTintColor:[UIColor colorWithRed:0.133 green:0.267 blue:0.533 alpha:1.000]];
         [self setHideTimeInterval:kNotificationViewDefaultHideTimeInterval];
+        [self setExtraTopInset:0.0];
     }
     return self;
 }
@@ -101,7 +102,7 @@ static CGFloat kNotificationViewShadowOffset = 5.0;                     // Shado
     
     UIColor *textColor = [self textColor];                  // Depends on fillColor
     BOOL textIncludesShadow = [self textIncludesShadow];    // Depends on fillColor
-    CGFloat labelVerticalPosition = kNotificationViewVerticalInset;    
+    CGFloat labelVerticalPosition = kNotificationViewVerticalInset + self.extraTopInset;
     
     // Title
     if (_title.length > 0)
@@ -294,7 +295,7 @@ static CGFloat kNotificationViewShadowOffset = 5.0;                     // Shado
 
 -(CGSize)expectedSize
 {
-    CGFloat height = kNotificationViewVerticalInset;
+    CGFloat height = kNotificationViewVerticalInset + self.extraTopInset;
     
     height += [self expectedTitleSize].height;
     
